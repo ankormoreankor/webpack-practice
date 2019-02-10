@@ -5,6 +5,7 @@
 /build/
 /coverage/
 /flow-coverage/
+/lessons/
 
 # Files
 *.log
