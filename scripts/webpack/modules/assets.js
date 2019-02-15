@@ -43,7 +43,7 @@ export const loadSvg = () => ({
                     {
                         loader:  'file-loader',
                         options: {
-                            name: `./images/${CHUNK_NAME_ASSET}`,
+                            name: './images/[name].[ext]',
                         },
                     },
                 ],
@@ -58,7 +58,7 @@ export const loadSvg = () => ({
                         loader:  'file-loader',
                         options: {
                             // limit: 0,
-                            name: `./images/${CHUNK_NAME_ASSET}`,
+                            name: './images/[name].[ext]',
                         },
                     },
                 ],
