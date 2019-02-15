@@ -6,7 +6,7 @@ import { hot } from 'react-hot-loader/root';
 import Styles from './postcss.css';
 import kitty from '../theme/images/kitty.jpg';
 
-console.log('→ kitty', kitty);
+import { Button } from './Button';
 
 class Clicker extends Component {
     state = {
@@ -28,8 +28,8 @@ class Clicker extends Component {
                 }}>
                 <img src = { kitty } />
                 <h1>Test: {count}</h1>
-                <button onClick = { this.inc }>Increment</button>
-                <button onClick = { this.dec }>Decrement</button>
+                <Button onClick = { this.inc }>Increment</Button>
+                <Button onClick = { this.dec }>Decrement</Button>
             </section>
         );
     }
