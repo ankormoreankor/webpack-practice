@@ -28,7 +28,7 @@ class Clicker extends Component {
                     '--mainColor':       'rebeccapurple',
                     '--headingFontSize': this.state.count + 'px',
                 }}>
-                <ReactLogoComponent with = { 50 } />
+                <ReactLogoComponent width = { 50 } />
                 <img src = { reactLogo } />
                 <img src = { kitty } />
                 <h1>Test: {count}</h1>
