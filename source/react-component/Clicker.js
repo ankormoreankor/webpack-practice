@@ -16,6 +16,8 @@ class Clicker extends Component {
     render() {
         const { count } = this.state;
 
+        throw new Error('Boom.');
+
         return (
             <section
                 className = { Styles.clicker }
@@ -26,7 +28,6 @@ class Clicker extends Component {
                 <h1>Test: {count}</h1>
                 <button onClick = { this.inc }>Increment</button>
                 <button onClick = { this.dec }>Decrement</button>
-                
             </section>
         );
     }
