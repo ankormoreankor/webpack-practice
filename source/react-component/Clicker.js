@@ -26,6 +26,7 @@ class Clicker extends Component {
                 <h1>Test: {count}</h1>
                 <button onClick = { this.inc }>Increment</button>
                 <button onClick = { this.dec }>Decrement</button>
+                
             </section>
         );
     }
