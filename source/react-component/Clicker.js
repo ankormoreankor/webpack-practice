@@ -16,8 +16,6 @@ class Clicker extends Component {
     render() {
         const { count } = this.state;
 
-        throw new Error('Boom.');
-
         return (
             <section
                 className = { Styles.clicker }
