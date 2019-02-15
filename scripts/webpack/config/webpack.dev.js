@@ -5,6 +5,8 @@ const merge = require('webpack-merge');
 // Configurations
 const getCommonConfig = require('./webpack.common');
 
+console.log('→ getCommonConfig', getCommonConfig);
+
 /**
  * Типы конфигов вебпак:
  * Function
