@@ -8,6 +8,8 @@ export class Button extends Component {
     render() {
         const { children, onClick } = this.props;
 
+        console.log('→ children', children);
+
         return (
             <button
                 onClick = { onClick }
