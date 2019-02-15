@@ -1,6 +1,6 @@
 {
     "name": "webpack-intensive",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "author": "Dima Vakatsiienko <dvakatsiienko@lectrum.io>",
     "private": true,
     "scripts": {
@@ -38,6 +38,7 @@
         "nodegit": "0.23.0",
         "postcss-loader": "3.0.0",
         "postcss-preset-env": "6.5.0",
+        "react-dev-utils": "7.0.3",
         "react-hot-loader": "4.6.5",
         "serve": "10.1.1",
         "style-loader": "0.23.1",

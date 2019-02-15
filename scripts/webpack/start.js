@@ -17,6 +17,7 @@ const webpack = require('webpack');
 const DevServer = require('webpack-dev-server');
 const hot = require('webpack-hot-middleware');
 const chalk = require('chalk'); // Раскрашивает консоль
+const openBrowser = require('react-dev-utils/openBrowser');
 
 // Config
 const getDevConfig = require('./config/webpack.dev');
@@ -64,6 +65,7 @@ const compiler = webpack(getDevConfig());
                     '→ Server listening on',
                 )} ${chalk.blueBright(`http://${HOST}:${choosenPort}`)}`,
             );
+            openBrowser(`http://${HOST}:${choosenPort}`);
         });
     } catch (error) {
         console.log(chalk.redBright('→ Error!'));

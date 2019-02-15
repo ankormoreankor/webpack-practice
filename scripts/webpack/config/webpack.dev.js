@@ -13,7 +13,7 @@ const getCommonConfig = require('./webpack.common');
  */
 module.exports = () => {
     return merge(getCommonConfig(), {
-        mode:    'none',
+        mode:    'development',
         devtool: false, // TODO: настроить source maps
         entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
         plugins: [
