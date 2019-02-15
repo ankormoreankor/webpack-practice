@@ -1,11 +1,11 @@
 // Core
 import React, { Component } from 'react';
-import { hot } from 'react-hot-loader/root';
+// import { hot } from 'react-hot-loader/root';
 
 // Styles
 import Styles from './postcss.css';
 
-class Clicker extends Component {
+export default class Clicker extends Component {
     state = {
         count: 34,
     };
@@ -33,4 +33,4 @@ class Clicker extends Component {
     }
 }
 
-export default hot(Clicker);
+// export default hot(Clicker);
