@@ -15,7 +15,7 @@ import { loadJavaScript } from '../modules';
  * Object
  * Promise
  */
-module.exports = () => {
+export default () => {
     return {
         entry:  [ SOURCE_DIRECTORY ],
         output: {
