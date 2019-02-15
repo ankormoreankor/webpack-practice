@@ -12,7 +12,7 @@ const getCommonConfig = require('./webpack.common');
  * Promise
  */
 module.exports = () => {
-    return merge(getCommonConfig(), {
+    return merge(getCommonConfig.default(), {
         mode:    'development',
         devtool: 'cheap-module-eval-source-map',
         entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
