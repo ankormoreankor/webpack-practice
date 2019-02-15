@@ -4,7 +4,7 @@
     margin-right: 5px;
     border: 1px solid red;
     border-radius: 7px;
-    background-color: var(--color2, 'wheat');
+    background-color:  'wheat';
     background-image: url('../../theme/images/pointer-icon.png');
     background-size: 30px;
     background-position: 5px 50%;
