@@ -20,6 +20,7 @@ module.exports = () => {
         },
         module: {
             rules: [
+                // loadJavaScript
                 {
                     test:    /\.js$/,
                     exclude: /node_modules/,
@@ -27,6 +28,7 @@ module.exports = () => {
                         loader: 'babel-loader',
                     },
                 },
+                // loadCss
                 {
                     // TODO: прокачать загрузку стилей
                     test: /\.css$/,
@@ -80,6 +82,7 @@ module.exports = () => {
                         },
                     ],
                 },
+                // loadImages
                 {
                     test: /\.(png|jpg|jpeg)$/,
                     use:  [
