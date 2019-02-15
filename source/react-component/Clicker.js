@@ -6,6 +6,8 @@ import { hot } from 'react-hot-loader/root';
 import Styles from './postcss.css';
 import kitty from '../theme/images/kitty.jpg';
 
+console.log('→ kitty', kitty);
+
 class Clicker extends Component {
     state = {
         count: 34,
