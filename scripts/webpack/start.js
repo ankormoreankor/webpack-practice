@@ -13,20 +13,20 @@
 // 4. ✓ настроить в исходном коде
 
 // Core
-const webpack = require('webpack');
-const DevServer = require('webpack-dev-server');
-const hot = require('webpack-hot-middleware');
-const chalk = require('chalk'); // Раскрашивает консоль
-const openBrowser = require('react-dev-utils/openBrowser');
+import webpack from 'webpack';
+import DevServer from 'webpack-dev-server';
+import hot from 'webpack-hot-middleware';
+import chalk from 'chalk'; // Раскрашивает консоль;
+import openBrowser from 'react-dev-utils/openBrowser';
 
 // Config
-const getDevConfig = require('./config/webpack.dev');
+import getDevConfig from './config/webpack.dev';
 
 // Utils
-const { choosePort } = require('./utils');
+import { choosePort } from './utils';
 
 // Constants
-const { HOST, PORT } = require('./constants');
+import { HOST, PORT } from './constants';
 
 const compiler = webpack(getDevConfig());
 
