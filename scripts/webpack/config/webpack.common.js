@@ -24,6 +24,7 @@ export default () => {
         },
         modules.loadJavaScript(),
         modules.loadCss(),
+        modules.loadImages(),
         modules.setupHtml(),
     );
 };
