@@ -1,3 +1,6 @@
+// Core
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 export const setupHtml = () => ({
     plugins: [
         // Каждый плагин — это конструктор
