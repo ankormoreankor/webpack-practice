@@ -5,7 +5,11 @@ import { hot } from 'react-hot-loader/root';
 // Styles
 import Styles from './postcss.css';
 import kitty from '../theme/images/kitty.jpg';
-// import { } from '../theme/images/react.svg';
+import { ReactComponent as ReactLogoComponent } from '../theme/images/react.svg';
+import ReactLogo from '../theme/images/react.svg';
+
+console.log('→ ', ReactLogoComponent);
+console.log('→ ', ReactLogo);
 
 import { Button } from './Button';
 
