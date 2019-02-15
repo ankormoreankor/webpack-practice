@@ -16,7 +16,7 @@ import { loadJavaScript } from '../modules';
  * Promise
  */
 export default () => {
-    return {
+    return merge({
         entry:  [ SOURCE_DIRECTORY ],
         output: {
             path:     BUILD_DIRECTORY,
@@ -101,5 +101,5 @@ export default () => {
                 favicon:  './static/favicon.ico',
             }),
         ],
-    };
+    });
 };
