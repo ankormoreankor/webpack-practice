@@ -6,7 +6,7 @@ import merge from 'webpack-merge';
 import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constants';
 
 // Modules
-import { loadJavaScript } from '../modules';
+import * as modules from '../modules';
 
 /**
  * Типы конфигов вебпак:
@@ -94,6 +94,7 @@ export default () => {
                 ],
             },
         },
-        loadJavaScript(),
+        modules.loadJavaScript(),
+        modules.setupHtml(),
     );
 };
