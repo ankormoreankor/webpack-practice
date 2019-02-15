@@ -42,7 +42,7 @@ const compiler = webpack(getDevConfig());
             return null;
         }
 
-        const server = new DevServer(compiler, {
+        const server = new DevServer(compiler, { // memory-fs
             host:               HOST,
             port:               choosenPort,
             historyApiFallback: true,
