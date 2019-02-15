@@ -14,7 +14,7 @@ const getCommonConfig = require('./webpack.common');
 module.exports = () => {
     return merge(getCommonConfig(), {
         mode:    'development',
-        devtool: 'cheap-eval-source-map',
+        devtool: 'cheap-module-eval-source-map',
         entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
         plugins: [
             // Каждый плагин — это конструктор
