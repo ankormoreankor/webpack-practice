@@ -1,9 +1,13 @@
 // Core
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const env = require('postcss-preset-env');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import env from 'postcss-preset-env';
+import merge from 'webpack-merge';
 
 // Constants
-const { SOURCE_DIRECTORY, BUILD_DIRECTORY } = require('../constants');
+import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constants';
+
+// Modules
+import { loadJavaScript } from '../modules';
 
 /**
  * Типы конфигов вебпак:
@@ -21,13 +25,6 @@ module.exports = () => {
         module: {
             rules: [
                 // loadJavaScript
-                {
-                    test:    /\.js$/,
-                    exclude: /node_modules/,
-                    use:     {
-                        loader: 'babel-loader',
-                    },
-                },
                 // loadCss
                 {
                     // TODO: прокачать загрузку стилей
