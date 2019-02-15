@@ -29,3 +29,40 @@ export const loadImages = () => ({
         ],
     },
 });
+
+export const loadSvg = () => ({
+    module: {
+        rules: [
+            {
+                test:   /\.svg$/,
+                issuer: {
+                    test: /\.js$/,
+                },
+                use: [
+                    '@svgr/webpack',
+                    {
+                        loader:  'file-loader',
+                        options: {
+                            name: `./images/${CHUNK_NAME_ASSET}`,
+                        },
+                    },
+                ],
+            },
+            {
+                test:   /\.svg$/,
+                issuer: {
+                    test: /\.css$/,
+                },
+                use: [
+                    {
+                        loader:  'file-loader',
+                        options: {
+                            // limit: 0,
+                            name: `./images/${CHUNK_NAME_ASSET}`,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+});
