@@ -54,12 +54,14 @@ const loadCss = ({ sourceMap = false } = { sourceMap: false }) => ({
 export const loadDevCss = () => ({
     module: {
         rules: [
-            // style loader
-            'style-loader',
-            // css loader → sourcemaps
-            loadCss({ sourceMap: true }),
-            // postcss loader
-            loadPostcss({ sourceMap: true }),
+            {
+                test: /\.css$/,
+                use:  [
+                    'style-loader',
+                    loadCss({ sourceMap: true }),
+                    loadPostcss({ sourceMap: true }),
+                ],
+            },
         ],
     },
 });
@@ -67,12 +69,14 @@ export const loadDevCss = () => ({
 export const loadProdCss = () => ({
     module: {
         rules: [
-            // mini-css-extract-plugin
-            // ?
-            // css loader → minify
-            loadCss({ sourceMap: false }),
-            // postcss loader
-            loadPostcss({ sourceMap: false }),
+            {
+                test: /\.css$/,
+                use:  [
+                    loadCss({ sourceMap: false }),
+                    // postcss loader
+                    loadPostcss({ sourceMap: false }),
+                ],
+            },
         ],
     },
 });
