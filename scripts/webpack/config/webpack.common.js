@@ -27,8 +27,10 @@ export default () => {
             },
             plugins: [
                 new DefinePlugin({
-                    __DEV__:  NODE_ENV === 'development',
-                    __PROD__: NODE_ENV === 'production',
+                    __ENV__:   JSON.stringify(NODE_ENV),
+                    __DEV__:   NODE_ENV === 'development',
+                    __STAGE__: NODE_ENV === 'stage',
+                    __PROD__:  NODE_ENV === 'production',
 
                     // HELLO_SIMPLE:      'hello',
                     // HELLO_STRINGIFIED: JSON.stringify('hello'),
