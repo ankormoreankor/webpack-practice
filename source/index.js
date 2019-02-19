@@ -27,10 +27,12 @@ import './theme/main.css';
 // 2. условия (дев или прод)
 // 3. фичи в разработке (feature flags)
 
-if (process.env.NODE_ENV === 'development') {
-    console.log('→ development');
-}
+console.log('→ RELEASE', RELEASE);
 
-if (RELEASE === '2.1') {
-    // код нашей фичи
-}
+// if (process.env.NODE_ENV === 'development') {
+//     console.log('→ development');
+// }
+
+// if (RELEASE === '2.1') {
+//     // код нашей фичи
+// }
