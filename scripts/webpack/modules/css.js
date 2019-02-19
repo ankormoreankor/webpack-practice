@@ -77,19 +77,6 @@ export const loadProdCss = () => ({
     },
 });
 
-// export const loadCsss = () => ({
-//     module: {
-//         rules: [
-//             {
-//                 test: /\.css$/,
-//                 use:  [
-//                     ,
-//                 ],
-//             },
-//         ],
-//     },
-// });
-
 export const loadSass = () => ({
     module: {
         rules: [
