@@ -31,7 +31,7 @@ export default () => {
                     // FOUR:              4,
                     // TRUE_SIMPLE:       true,
                     // TRUE_STRINGIFIED:  JSON.stringify(true),
-                    HELLO_SIMPLE:      'hello',
+                    // HELLO_SIMPLE:      'hello',
                     HELLO_STRINGIFIED: JSON.stringify('hello'),
                 }),
             ],
