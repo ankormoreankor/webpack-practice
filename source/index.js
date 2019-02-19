@@ -33,6 +33,7 @@ import './theme/main.css';
 // console.log('→', TRUE_SIMPLE);
 // console.log('→', TRUE_STRINGIFIED);
 
+// console.log('→ __IS_ADMIN__', __IS_ADMIN__);
 console.log('→ __ENV__', __ENV__);
 console.log('→ __DEV__', __DEV__);
 console.log('→ __STAGE__', __STAGE__);
