@@ -5,6 +5,9 @@ const merge = require('webpack-merge');
 // Configurations
 const getCommonConfig = require('./webpack.common');
 
+// Modules
+import * as modules from '../modules';
+
 /**
  * Типы конфигов вебпак:
  * Function
@@ -12,13 +15,17 @@ const getCommonConfig = require('./webpack.common');
  * Promise
  */
 module.exports = () => {
-    return merge(getCommonConfig.default(), {
-        mode:    'development',
-        devtool: 'cheap-module-eval-source-map',
-        entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
-        plugins: [
-            // Каждый плагин — это конструктор
-            new HotModuleReplacementPlugin(),
-        ],
-    });
+    return merge(
+        getCommonConfig.default(),
+        {
+            mode:    'development',
+            devtool: 'cheap-module-eval-source-map',
+            entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
+            plugins: [
+                // Каждый плагин — это конструктор
+                new HotModuleReplacementPlugin(),
+            ],
+        },
+        modules.loadDevCss(),
+    );
 };
