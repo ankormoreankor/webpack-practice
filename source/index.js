@@ -26,7 +26,7 @@ import './theme/main.css';
 // 2. условия (дев или прод)
 // 3. фичи в разработке (feature flags)
 
-console.log('→ RELEASE', RELEASE);
+console.log('→', RELEASE);
 console.log('→', TWO);
 console.log('→', THREE);
 console.log('→', FOUR);
