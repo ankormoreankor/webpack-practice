@@ -26,12 +26,15 @@ import './theme/main.css';
 // 2. условия (дев или прод)
 // 3. фичи в разработке (feature flags)
 
-console.log('→ ', RELEASE);
-console.log('→', TWO);
-console.log('→', THREE);
-console.log('→', FOUR);
-console.log('→', TRUE_SIMPLE);
-console.log('→', TRUE_STRINGIFIED);
+// console.log('→ ', RELEASE);
+// console.log('→', TWO);
+// console.log('→', THREE);
+// console.log('→', FOUR);
+// console.log('→', TRUE_SIMPLE);
+// console.log('→', TRUE_STRINGIFIED);
+
+console.log('→ HELLO_SIMPLE', HELLO_SIMPLE);
+console.log('→ HELLO_STRINGIFIED', HELLO_STRINGIFIED);
 
 // if (process.env.NODE_ENV === 'development') {
 //     console.log('→ development');
