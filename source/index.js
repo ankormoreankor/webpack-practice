@@ -21,7 +21,7 @@ import './theme/main.css';
 // import './react-component';
 
 
-// ENV variables
+// ! ENV variables
 
 // 1. API (ссылка к API — дев или прод)
 // 2. условия (дев или прод)
