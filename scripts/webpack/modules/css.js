@@ -72,8 +72,8 @@ export const loadProdCss = () => ({
             {
                 test: /\.css$/,
                 use:  [
+                    // ! TODO: mini-css-extract-plugin
                     loadCss({ sourceMap: false }),
-                    // postcss loader
                     loadPostcss({ sourceMap: false }),
                 ],
             },
