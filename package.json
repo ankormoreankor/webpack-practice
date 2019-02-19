@@ -1,6 +1,6 @@
 {
     "name": "webpack-intensive",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "author": "Dima Vakatsiienko <dvakatsiienko@lectrum.io>",
     "private": true,
     "scripts": {
@@ -37,11 +37,13 @@
         "inquirer": "6.2.2",
         "mini-css-extract-plugin": "0.5.0",
         "moment": "2.22.2",
+        "node-sass": "4.11.0",
         "nodegit": "0.23.0",
         "postcss-loader": "3.0.0",
         "postcss-preset-env": "6.5.0",
         "react-dev-utils": "7.0.3",
         "react-hot-loader": "4.6.5",
+        "sass-loader": "7.1.0",
         "serve": "10.1.1",
         "style-loader": "0.23.1",
         "webpack": "4.29.1",
