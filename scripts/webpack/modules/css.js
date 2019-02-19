@@ -9,7 +9,10 @@ const loadPostcss = (
 ) => {
     const plugins = [
         // цепочка плагинов postcss
-
+        // ↓
+        // ↓
+        // ↓
+        // ↓
         env({
             stage:    0, // default: stage 2
             features: {
