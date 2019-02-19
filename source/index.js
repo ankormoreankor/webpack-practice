@@ -25,5 +25,9 @@ if (process.env.NODE_ENV === 'development') {
     console.log('→ development');
 }
 
+if (RELEASE === '2.1') {
+    // код нашей фичи
+}
+
 // import './simple-components/javascript';
 import './react-component';
