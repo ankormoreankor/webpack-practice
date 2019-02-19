@@ -53,3 +53,5 @@ if (__PROD__) {
 // if (RELEASE === '2.1') {
 //     // код нашей фичи
 // }
+
+// import { API_URI } from '../api/config'
