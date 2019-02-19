@@ -17,5 +17,10 @@ import './theme/main.css';
 //     });
 // }
 
+// 1. API (ссылка к API — дев или прод)
+// 2. условия (дев или прод)
+// 3. фичи в разработке (feature flags)
+
+
 // import './simple-components/javascript';
 import './react-component';
