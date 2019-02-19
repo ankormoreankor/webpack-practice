@@ -1,21 +1,42 @@
 // Core
 import env from 'postcss-preset-env';
 
-export const loadCss = () => ({
+const loadCss = ({ sourceMap = false } = { sourceMap: false }) => ({
+    loader:  'css-loader',
+    options: {
+        modules:        true,
+        localIdentName: '[path][name]__[local]--[hash:base64:5]',
+        sourceMap,
+    },
+});
+
+export const loadDevCss = () => ({
+    module: {
+        rules: [
+            // style loader
+            'style-loader',
+            // css loader → sourcemaps
+            loadCss({ sourceMap: true }),
+            // postcss loader
+        ],
+    },
+});
+
+export const loadProdCss = () => ({
+    module: {
+        rules: [],
+    },
+    // mini-css-extract-plugin
+    // css loader → minify
+    // postcss loader
+});
+
+export const loadCsss = () => ({
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use:  [
-                    'style-loader',
-                    {
-                        loader:  'css-loader',
-                        options: {
-                            modules:        true,
-                            localIdentName:
-                                '[path][name]__[local]--[hash:base64:5]',
-                        },
-                    },
                     {
                         loader:  'postcss-loader',
                         options: {
