@@ -17,6 +17,12 @@ import './theme/main.css';
 //     });
 // }
 
+// import './simple-components/javascript';
+// import './react-component';
+
+
+// ENV variables
+
 // 1. API (ссылка к API — дев или прод)
 // 2. условия (дев или прод)
 // 3. фичи в разработке (feature flags)
@@ -28,6 +34,3 @@ if (process.env.NODE_ENV === 'development') {
 if (RELEASE === '2.1') {
     // код нашей фичи
 }
-
-// import './simple-components/javascript';
-// import './react-component';
