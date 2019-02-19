@@ -4,6 +4,8 @@ import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminPngquant from 'imagemin-pngquant';
 import imageminSvgo from 'imagemin-svgo';
 
+// 1. коммерческие решения
+// 2. оптимизация webpack
 export const optimizeImages = () => ({
     plugins: [
         new ImageminWebpackPlugin({
