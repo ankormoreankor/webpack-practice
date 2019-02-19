@@ -1,4 +1,5 @@
 // Core
+import { DefinePlugin } from 'webpack';
 import merge from 'webpack-merge';
 
 // Constants
@@ -22,6 +23,13 @@ export default () => {
                 filename:   'js/bundle.js',
                 publicPath: '/',
             },
+            plugins: [
+                new DefinePlugin({
+                    RELEASE: '2.0',
+                    TWO: '1+1',
+                    THREE: JSON.stringify(3);
+                })
+            ]
         },
         modules.loadJavaScript(),
         modules.loadSass(),
