@@ -39,6 +39,10 @@ const loadPostcss = (
         }),
     ];
 
+    if (minify) {
+        plugins.push(cssnano);
+    }
+
     return {
         loader:  'postcss-loader',
         options: {
