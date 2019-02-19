@@ -25,11 +25,12 @@ export default () => {
             },
             plugins: [
                 new DefinePlugin({
-                    RELEASE:     '2.0',
-                    TWO:         '1+1',
-                    THREE:       JSON.stringify(3),
-                    FOUR:        4,
-                    TRUE_SIMPLE: true,
+                    RELEASE:          '2.0',
+                    TWO:              '1+1',
+                    THREE:            JSON.stringify(3),
+                    FOUR:             4,
+                    TRUE_SIMPLE:      true,
+                    TRUE_STRINGIFIED: JSON.stringify(true),
                 }),
             ],
         },
