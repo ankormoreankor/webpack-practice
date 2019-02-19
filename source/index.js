@@ -21,6 +21,9 @@ import './theme/main.css';
 // 2. условия (дев или прод)
 // 3. фичи в разработке (feature flags)
 
+if (process.env.NODE_ENV === 'development') {
+    console.log('→ development');
+}
 
 // import './simple-components/javascript';
 import './react-component';
