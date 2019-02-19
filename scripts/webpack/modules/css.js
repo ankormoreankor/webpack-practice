@@ -1,6 +1,7 @@
 // Core
 import env from 'postcss-preset-env';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import cssnano from 'cssnano';
 
 // cssnano → минификация
 const loadPostcss = (
@@ -60,7 +61,7 @@ export const loadDevCss = () => ({
                 use:  [
                     'style-loader',
                     loadCss({ sourceMap: true }),
-                    loadPostcss({ sourceMap: true }),
+                    loadPostcss({ sourceMap: true, minify: false }),
                 ],
             },
         ],
@@ -75,7 +76,7 @@ export const loadProdCss = () => ({
                 use:  [
                     MiniCssExtractPlugin.loader,
                     loadCss({ sourceMap: false }),
-                    loadPostcss({ sourceMap: false }),
+                    loadPostcss({ sourceMap: false, minify: true }),
                 ],
             },
         ],
