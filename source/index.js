@@ -33,8 +33,10 @@ import './theme/main.css';
 // console.log('→', TRUE_SIMPLE);
 // console.log('→', TRUE_STRINGIFIED);
 
-console.log('→ HELLO_SIMPLE', HELLO_SIMPLE);
-console.log('→ HELLO_STRINGIFIED', HELLO_STRINGIFIED);
+console.log('→ __ENV__', __ENV__);
+console.log('→ __DEV__', __DEV__);
+console.log('→ __STAGE__', __STAGE__);
+console.log('→ __PROD__', __PROD__);
 
 // if (process.env.NODE_ENV === 'development') {
 //     console.log('→ development');
