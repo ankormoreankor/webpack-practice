@@ -39,6 +39,13 @@ console.log('→ __DEV__', __DEV__);
 console.log('→ __STAGE__', __STAGE__);
 console.log('→ __PROD__', __PROD__);
 
+if (__DEV__) {
+    console.log('→ dev' );
+}
+if (__PROD__) {
+    console.log('→ prod' );
+}
+
 // if (process.env.NODE_ENV === 'development') {
 //     console.log('→ development');
 // }
