@@ -30,4 +30,4 @@ if (RELEASE === '2.1') {
 }
 
 // import './simple-components/javascript';
-import './react-component';
+// import './react-component';
