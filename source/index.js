@@ -20,7 +20,6 @@ import './theme/main.css';
 // import './simple-components/javascript';
 // import './react-component';
 
-
 // ! ENV variables
 
 // 1. API (ссылка к API — дев или прод)
@@ -28,6 +27,11 @@ import './theme/main.css';
 // 3. фичи в разработке (feature flags)
 
 console.log('→ RELEASE', RELEASE);
+console.log('→', TWO);
+console.log('→', THREE);
+console.log('→', FOUR);
+console.log('→', TRUE_SIMPLE);
+console.log('→', TRUE_STRINGIFIED);
 
 // if (process.env.NODE_ENV === 'development') {
 //     console.log('→ development');
