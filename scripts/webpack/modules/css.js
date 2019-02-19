@@ -18,17 +18,22 @@ export const loadDevCss = () => ({
             // css loader → sourcemaps
             loadCss({ sourceMap: true }),
             // postcss loader
+            // ?
         ],
     },
 });
 
 export const loadProdCss = () => ({
     module: {
-        rules: [],
+        rules: [
+            // mini-css-extract-plugin
+            // ?
+            // css loader → minify
+            loadCss({ sourceMap: false }),
+            // postcss loader
+            // ?
+        ],
     },
-    // mini-css-extract-plugin
-    // css loader → minify
-    // postcss loader
 });
 
 export const loadCsss = () => ({
