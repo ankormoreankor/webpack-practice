@@ -1,9 +1,9 @@
 // Core
-const { HotModuleReplacementPlugin } = require('webpack');
-const merge = require('webpack-merge');
+import { HotModuleReplacementPlugin } from 'webpack';
+import merge from 'webpack-merge';
 
 // Configurations
-const getCommonConfig = require('./webpack.common');
+import getCommonConfig from './webpack.common';
 
 /**
  * Типы конфигов вебпак:
@@ -11,10 +11,10 @@ const getCommonConfig = require('./webpack.common');
  * Object
  * Promise
  */
-module.exports = () => {
+export default () => {
     return merge(getCommonConfig(), {
         mode:    'development',
-        devtool: false, // TODO: настроить source maps
+        devtool: 'cheap-module-eval-source-map',
         entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
         plugins: [
             // Каждый плагин — это конструктор
