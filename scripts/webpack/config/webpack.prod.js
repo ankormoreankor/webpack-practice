@@ -8,6 +8,9 @@ const { PROJECT_ROOT, BUILD_DIRECTORY } = require('../constants');
 // Configurations
 const getCommonConfig = require('./webpack.common');
 
+// Modules
+import * as modules from '../modules';
+
 // the clean options to use
 const cleanOptions = {
     verbose: true,
@@ -21,9 +24,13 @@ const cleanOptions = {
  * Promise
  */
 module.exports = () => {
-    return merge(getCommonConfig(), {
-        mode:    'none',
-        devtool: false,
-        plugins: [ new CleanWebpackPlugin([ BUILD_DIRECTORY ], cleanOptions) ],
-    });
+    return merge(
+		getCommonConfig.default(),
+		{
+	        mode:    'none',
+	        devtool: false,
+	        plugins: [ new CleanWebpackPlugin([ BUILD_DIRECTORY ], cleanOptions) ],
+		},
+		modules.loadProdCss(),
+	);
 };
