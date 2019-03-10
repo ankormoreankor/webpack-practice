@@ -18,4 +18,9 @@ import './theme/main.css';
 // }
 
 // import './simple-components/javascript';
-import './react-component';
+// import './react-component';
+
+console.log('__ENV__', __ENV__);
+console.log('__DEV__', __DEV__);
+console.log('__STAGE__', __STAGE__);
+console.log('__PROD__', __PROD__);
