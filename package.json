@@ -5,7 +5,8 @@
     "private": true,
     "scripts": {
         "start": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/webpack/start.js\"",
-        "build": "cross-env-shell NODE_ENV=production node --require @babel/register \"./scripts/webpack/build.js\"",
+		"build": "cross-env-shell NODE_ENV=production node --require @babel/register \"./scripts/webpack/build.js\"",
+		"analyze": "webpack-bundle-analyzer \"./build/stats.json\"",
         "checkpoint": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/checkpoint.js\"",
         "sync": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/sync.js\"",
         "serve": "serve \"./build\" -s"
@@ -53,6 +54,7 @@
         "serve": "10.1.1",
         "style-loader": "0.23.1",
         "webpack": "4.29.1",
+        "webpack-bundle-analyzer": "^3.1.0",
         "webpack-dev-server": "3.1.14",
         "webpack-hot-middleware": "2.24.3",
         "webpack-merge": "4.2.1",

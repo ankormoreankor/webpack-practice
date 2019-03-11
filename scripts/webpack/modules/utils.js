@@ -3,6 +3,7 @@ import { HotModuleReplacementPlugin } from 'webpack';
 import WebpackBar from 'webpackbar';
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 // Constants
 import { PROJECT_ROOT, BUILD_DIRECTORY } from '../constants';
@@ -21,9 +22,19 @@ export const connectHMR = () => ({
 
 export const cleanDirectories = () => ({
     plugins: [
-        new CleanWebpackPlugin([ BUILD_DIRECTORY ], {
-            verbose: true,
+		new CleanWebpackPlugin([ BUILD_DIRECTORY ], {
+			verbose: true,
             root:    PROJECT_ROOT,
         }),
     ],
+});
+
+export const connectBundleAnalyzer = () => ({
+	plugins: [
+		new BundleAnalyzerPlugin({
+			analyzerMode: 'disabled',
+			openAnalyzer: false,
+			generateStatsFile: true,
+		}),
+	],
 });
